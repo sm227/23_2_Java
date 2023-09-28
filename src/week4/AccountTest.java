@@ -2,7 +2,7 @@ package week4;
 class Account {
     String name;
     int balance = 0;
-    public Account(String name, int balance) {
+    public Account(String name, int balance) { // 생성자 -> 계좌 생성
        this.name = name;
        this.balance = balance;
     }
@@ -11,25 +11,25 @@ class Account {
 
     }
 
-    public String getName() {
+    public String getName() { // 예금주 성함 조회
         return name;
     }
 
-    public int getBalance() {
+    public int getBalance() { // 잔액 조회
         return balance;
     }
 
-    public int deposit(int a) {
+    public int deposit(int a) { // 입금 기능
         balance += a;
         return a;
     }
 
-    public int withdraw(int a) {
+    public int withdraw(int a) { // 출금 기능
         if (balance < a) {
-            System.out.println("잔액이 부족합니다.");
+            System.out.println("잔액이 부족합니다."); // 잔액부족
             return 0;
         }
-        return a;
+        return a; // 정상처리
     }
 
 }
