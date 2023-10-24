@@ -37,3 +37,4 @@ public class Student {
         System.out.println("나이=" + a.getAge());
     }
 }
+
