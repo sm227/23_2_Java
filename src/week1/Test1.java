@@ -1,4 +1,4 @@
-package week01;
+package week1;
 /** (1) 자바메소드정리.java : 2라인-27라인 **/
 class MethodTest1 {
     public int add (int a, int b) {

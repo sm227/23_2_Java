@@ -1,3 +1,8 @@
+package week2;
+
+/**
+ * (2) 수업시간에 했던 합격 여부를 알려주는 메소드 설계 문제
+ */
 class Test {
     public void pass(int a, int b, int c) {
         int sum = a + b + c;

@@ -1,9 +1,11 @@
+package week2;
+
 class Test2 {
     public boolean pass2(int a, int b, int c) {
         int sum = a + b + c;
         int avg = sum/3;
 
-        return avg >= 60;
+        return avg >= 60; // True, False 값을 리턴 -> True
     }
 }
 public class Main2 {

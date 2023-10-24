@@ -1,3 +1,5 @@
+package week2;
+
 class Test3 {
     public String pass3(int a, int b, int c) {
         int sum = a + b + c;
