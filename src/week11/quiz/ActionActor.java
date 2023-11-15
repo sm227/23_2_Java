@@ -18,3 +18,5 @@ public class ActionActor extends Actor{
         System.out.printf("액션배우%s 은 연기합니다 \n", name);
     }
 }
+
+
