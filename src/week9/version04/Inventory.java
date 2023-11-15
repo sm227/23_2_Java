@@ -32,7 +32,6 @@ public class Inventory {
 
     public List<Guitar> search(GuitarSpec searchSpec) {
         List<Guitar> matchingGuitars = new LinkedList<Guitar>();
-
         for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
             Guitar guitar = (Guitar) i.next();
 
