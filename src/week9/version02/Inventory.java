@@ -30,12 +30,12 @@ public class Inventory {
     }
 
     public List<Guitar> search(Guitar searchGuitar) {
-        List<Guitar> matchingGuitars = new LinkedList<Guitar>();
+        List<Guitar> matchingGuitars = new LinkedList<Guitar>(); // matchingGuitars 는 Guitar 타입의 새로운 링크드 리스트.
 
-        for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
-            Guitar guitar = (Guitar) i.next();
+        for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) { // Guitar 타입의 i =  guitars를 컬렉션 프레임워크로 생성.
+            Guitar guitar = (Guitar) i.next(); // i 값 하나씩 넘기면서 탐색.
 
-            if (searchGuitar.getBuilder() != guitar.getBuilder()) continue;
+            if (searchGuitar.getBuilder() != guitar.getBuilder()) continue; // 일치하지 않으면 아래 수행하지 않고 다음단계로 넘어감.
 
             String model = searchGuitar.getModel().toLowerCase();
             if ((model != null) && (!model.equals("")) && (!model.equals(guitar.getModel().toLowerCase()))) continue;
@@ -46,8 +46,8 @@ public class Inventory {
 
             if (searchGuitar.getTopWood() != guitar.getTopWood()) continue;
 
-            matchingGuitars.add(guitar);
+            matchingGuitars.add(guitar); // 전부 통과하면 리스트에 기타 추가.
         }
-        return matchingGuitars;
+        return matchingGuitars; // 리스트 리턴
     }
 }
