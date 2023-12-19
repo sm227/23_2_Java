@@ -1,5 +1,6 @@
 package week12.practice;
 
+
 class Park implements Runnable {
     public void start() {
         System.out.println("Park MAXSPEED = " + MAXSPEED);

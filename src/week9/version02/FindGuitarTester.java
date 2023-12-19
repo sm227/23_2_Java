@@ -6,7 +6,7 @@ import java. util.List;
 public class FindGuitarTester {
 
     public static void main(String[] args) {
-        Inventory inventory = new Inventory();
+        Inventory inventory = new Inventory(); // Inventory 생성 -> Guitar 타입의 새로운 링크드 리스트가 생성됨.
         initializeInventory(inventory);
 
         Guitar whatErinLikes = new Guitar("", 0, Builder.FENDER, "Stratocastor", Type.ELECTRIC,

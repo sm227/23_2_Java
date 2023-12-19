@@ -1,6 +1,6 @@
 package week9.version02;
 
-public enum Builder {
+public enum Builder { // 같은 타입끼리 묶은 열거형. 대소문자 문제 없음.
     FENDER, MARTIN, GIBSON, COLLINGS, OLSON, RYAN, PRS, ANY;
 
     public String toString() {
