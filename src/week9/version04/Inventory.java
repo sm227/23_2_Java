@@ -4,7 +4,6 @@ package week9.version04;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Locale;
 
 
 public class Inventory {

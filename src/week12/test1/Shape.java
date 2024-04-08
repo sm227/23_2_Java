@@ -1,7 +1,5 @@
 package week12.test1;
 
-import javax.naming.Name;
-
 abstract class Shape {
     String name;
     int area;

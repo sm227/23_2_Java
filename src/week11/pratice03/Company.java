@@ -1,7 +1,5 @@
 package week11.pratice03;
 
-import week11.Computer;
-
 public class Company {
     private Manager jmchoi, yckim;
     private Employee park, lee;

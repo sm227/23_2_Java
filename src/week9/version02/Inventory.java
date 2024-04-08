@@ -4,7 +4,6 @@ package week9.version02;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.zip.GZIPInputStream;
 
 public class Inventory {
     private List<Guitar> guitars; // 기타 타입의 리스트
