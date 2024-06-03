@@ -1,8 +1,8 @@
 package T24.week14;
 
-public  enum DoorStatus {CLOSED, OPENED}
-public enum MotorStatus {MOVING, STOPPED}
-public enum Direction {UP, DOWN}
+enum DoorStatus {CLOSED, OPENED}
+enum MotorStatus {MOVING, STOPPED}
+enum Direction {UP, DOWN}
 
 public class Door {
     private DoorStatus doorStatus;
