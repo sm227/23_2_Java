@@ -1,9 +1,11 @@
 package T24;
 
-abstract class Printer {
+
+// 프린터 구현 최상위 클래스
+abstract class PrinterImpl {
     private String ID;
 
-    public Printer(String ID) {
+    public PrinterImpl(String ID) {
         this.ID = ID;
     }
 
@@ -11,12 +13,28 @@ abstract class Printer {
         return ID;
     }
 
-    public void print(Object msg) {
+    abstract public void print(Object msg);
+}
 
+class Printer {
+    private String ID;
+
+    private PrinterImpl printerImpl; // 실제 본 프린처를 구현한 클래스
+
+    public Printer(PrinterImpl printerImpl) {
+        this.printerImpl = printerImpl;
+    }
+
+    public String getID() {
+        return printerImpl.getID();
+    }
+
+    public void print(Object msg) {
+        printerImpl.print(msg);
     }
 }
 
-class InkgetPrinter extends Printer {
+class InkgetPrinter extends PrinterImpl {
     public InkgetPrinter(String ID) {
         super(ID);
     }
@@ -28,7 +46,7 @@ class InkgetPrinter extends Printer {
     }
 }
 
-class LaserPrinter extends Printer {
+class LaserPrinter extends PrinterImpl {
     public LaserPrinter(String ID) {
         super(ID);
     }
@@ -40,7 +58,8 @@ class LaserPrinter extends Printer {
     }
 }
 
-class DotPrinter extends Printer {
+
+class DotPrinter extends PrinterImpl {
     public DotPrinter(String ID) {
         super(ID);
     }
@@ -56,9 +75,9 @@ class DotPrinter extends Printer {
 public class test {
     public static void main(String[] args) {
         Printer[] printers = new Printer[3];
-        printers[0] = new InkgetPrinter("101");
-        printers[1] = new DotPrinter("102");
-        printers[2] = new LaserPrinter("103");
+        printers[0] = new Printer(new InkgetPrinter("101"));
+        printers[1] = new Printer(new DotPrinter("102"));
+        printers[2] = new Printer(new LaserPrinter("103"));
 
         for (int i = 0; i < printers.length; i++) {
             if (printers[i].getID().equals("101")) {
